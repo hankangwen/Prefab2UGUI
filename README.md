@@ -20,7 +20,7 @@
 
 Unity 中的反射机制允许我们在运行时获取和使用程序集中的类型信息。通过反射，我们可以动态地获取预制体的属性和组件信息，从而生成相应的代码。
 
-```
+```C#
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -144,7 +144,7 @@ public class AutoBuild
 
 结合反射，我们可以使用模板生成技术，根据预制体的信息生成代码模板，然后填充相应的属性和方法。
 
-```
+```c#
 public class AutoBuildTemplate
 {
     public static string UIClass =
@@ -178,7 +178,7 @@ AutoBuildTemplate 为 UI 基本样例类，很多项目开发都会有自己定�
 
 我们可以通过当前列表来映射 UGUI 的 UI 控件。这样在添加对应控件的时候，脚本就能够解析到，映射对应的控件：
 
-```
+```C#
 var dicUIType = new Dictionary<string, string>();
 dicUIType.Add("Img", "Image");
 dicUIType.Add("Btn", "Button");
@@ -199,7 +199,7 @@ dicUIType.Add("Scr", "Scrollbar");
 
 生成的代码样例：
 
-```
+```c#
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
